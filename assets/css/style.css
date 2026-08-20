@@ -366,23 +366,23 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
+    height: 84px;
     gap: 1.5rem;
 }
 
-/* Simplified KCS Logo (Monochrome Clean White & Compact) */
+/* KCS Logo (Prominent & Clear) */
 .brand-logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.85rem;
     text-decoration: none;
     flex-shrink: 0;
 }
 
 .logo-img {
-    height: 36px;
+    height: 50px;
     width: auto;
-    max-width: 120px;
+    max-width: 150px;
     object-fit: contain;
     filter: brightness(0) invert(1);
     opacity: 0.95;
@@ -391,9 +391,9 @@ button {
 }
 
 .logo-img.logo-monochrome {
-    height: 36px;
+    height: 50px;
     width: auto;
-    max-width: 120px;
+    max-width: 150px;
     object-fit: contain;
     filter: brightness(0) invert(1);
     opacity: 0.95;
@@ -418,7 +418,7 @@ button {
 .brand-name {
     font-family: var(--font-heading);
     font-weight: 900;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
     color: var(--clr-white);
     line-height: 1;
@@ -432,17 +432,17 @@ button {
 .brand-main {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
+    font-size: 1.3rem;
+    letter-spacing: 0.6px;
     color: var(--clr-white);
-    line-height: 1.1;
+    line-height: 1.15;
     white-space: nowrap;
 }
 
 .brand-sub {
-    font-size: 0.625rem;
+    font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.4px;
     color: var(--clr-accent-orange);
     text-transform: uppercase;
     margin-top: 2px;
@@ -1746,7 +1746,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   13. RESPONSIVE BREAKPOINTS (MEDIA QUERIES)
+   13. RESPONSIVE BREAKPOINTS & MOBILE-FRIENDLY STYLES
    -------------------------------------------------------------------------- */
 @media (max-width: 1100px) {
     .nav-list {
@@ -1758,18 +1758,18 @@ button {
     }
 
     .brand-main {
-        font-size: 0.95rem;
+        font-size: 1.15rem;
     }
 
     .brand-sub {
-        font-size: 0.55rem;
+        font-size: 0.65rem;
     }
 }
 
 @media (max-width: 1024px) {
     .hero-container {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem;
         text-align: center;
     }
 
@@ -1794,7 +1794,7 @@ button {
 
     .goals-wrapper {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem;
     }
 
     .policy-block,
@@ -1819,10 +1819,23 @@ button {
     .career-banner {
         flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
     }
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 1.85rem;
+    }
+
     .top-bar {
         display: none;
     }
@@ -1839,13 +1852,15 @@ button {
         position: fixed;
         top: 0;
         right: -300px;
-        width: 280px;
+        width: 285px;
         height: 100vh;
         background-color: var(--clr-navy-darker);
         padding: 5rem 1.5rem 2rem 1.5rem;
         transition: right var(--transition-normal);
         z-index: 1001;
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
     }
 
     .nav-menu.active {
@@ -1855,34 +1870,68 @@ button {
     .nav-list {
         flex-direction: column;
         align-items: flex-start;
-        gap: 1.5rem;
+        gap: 1.25rem;
     }
 
     .mobile-cta-wrapper {
         display: block;
+        margin-top: 1.5rem;
+    }
+
+    .hero-section {
+        padding: 3.5rem 0;
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
+        line-height: 1.25;
     }
 
     .hero-trust-metrics {
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.85rem;
     }
 
     .trust-divider {
-        width: 50px;
+        width: 60px;
         height: 1px;
+    }
+
+    /* Horizontal scroll filter tabs on mobile */
+    .equipment-filters-wrapper {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 0.75rem;
+        margin-bottom: 2rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .equipment-filters-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding: 0.55rem 1.2rem;
+        font-size: 0.88rem;
     }
 
     .form-row {
         grid-template-columns: 1fr;
     }
 
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        gap: 1rem;
     }
 
     .goals-highlights {
@@ -1890,19 +1939,156 @@ button {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     .section-title {
-        font-size: 1.75rem;
+        font-size: 1.65rem;
+    }
+
+    .section-desc {
+        font-size: 0.95rem;
     }
 
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.925rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .goals-stats-grid,
+    .goals-stats-box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .stat-card {
+        padding: 1.1rem 0.75rem;
+        border-radius: 14px;
+    }
+
+    .stat-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.15rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-num {
+        font-size: 1.95rem;
+    }
+
+    .stat-label {
+        font-size: 0.78rem;
+    }
+
+    .goals-img {
+        height: 260px;
+    }
+
+    .policy-block,
+    .policy-block.reverse {
+        padding: 1.25rem;
+        border-radius: 16px;
+        gap: 1.25rem;
+    }
+
+    .policy-img-col {
+        height: 210px;
+        border-radius: 12px;
+    }
+
+    .policy-letter-badge {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+
+    .policy-title {
+        font-size: 1.35rem;
+    }
+
+    .policy-desc {
+        font-size: 0.925rem;
     }
 
     .card-top-right,
     .card-bottom-left {
         position: static;
-        margin-top: 1rem;
+        margin-top: 0.75rem;
+        width: 100%;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .equipment-actions {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .modal-dialog {
+        width: 94%;
+        padding: 1.25rem 1rem;
+        border-radius: 16px;
+        margin: 1rem auto;
+    }
+
+    /* Prevent iOS browser auto-zoom on select & inputs */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px !important;
+    }
+
+    .whatsapp-floating-btn {
+        bottom: 1.25rem;
+        left: 1.25rem;
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+    }
+
+    .scroll-top-btn {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .goals-stats-grid,
+    .goals-stats-box {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -2720,4 +2906,741 @@ button {
     font-weight: 600;
     color: #CBD5E1;
     line-height: 1.35;
+}
+
+/* ==========================================================================
+   REF-MATCHING DESIGN STYLES FOR HEADER & HERO (PT KARYA CIPTA SETIAWAN)
+   ========================================================================== */
+
+/* Brand Logo Group & Circular Emblem */
+.brand-logo-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo-circular-emblem {
+    width: 68px;
+    height: 68px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+    transition: transform var(--transition-fast);
+}
+
+.brand-logo-group:hover .logo-circular-emblem {
+    transform: scale(1.05);
+}
+
+.kcs-emblem-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.brand-title-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-main {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.55rem;
+    letter-spacing: 0.8px;
+    color: var(--clr-white);
+    line-height: 1.1;
+    white-space: nowrap;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.brand-sub {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    color: #FF9F1C;
+    text-transform: uppercase;
+    margin-top: 3px;
+    white-space: nowrap;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Nav Right Cluster (Top Quotation button + Menu Nav) */
+.nav-right-cluster {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+}
+
+.nav-top-row {
+    display: flex;
+    align-items: center;
+}
+
+.btn-quotation-top {
+    background: #141f36;
+    color: var(--clr-white);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.45rem 1.2rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--transition-fast);
+}
+
+.btn-quotation-top:hover {
+    background: var(--clr-accent-orange);
+    color: #0B1021;
+    border-color: var(--clr-accent-orange);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 159, 28, 0.3);
+}
+
+/* Hero Typography & Buttons */
+.highlight-text-orange {
+    color: #FF9F1C;
+    font-weight: 900;
+    text-shadow: 0 2px 10px rgba(255, 159, 28, 0.2);
+}
+
+.btn-solid-orange {
+    background: #FF8C00;
+    color: var(--clr-white);
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 0.85rem 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.35);
+    transition: all var(--transition-fast);
+}
+
+.btn-solid-orange:hover {
+    background: #ff9d1a;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 140, 0, 0.45);
+}
+
+.btn-dark-outline {
+    background: rgba(18, 26, 47, 0.85);
+    color: var(--clr-white);
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 0.85rem 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    backdrop-filter: blur(8px);
+    transition: all var(--transition-fast);
+}
+
+.btn-dark-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--clr-white);
+    transform: translateY(-2px);
+}
+
+/* Layered Poster Media Panel */
+.media-panel-container {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.parchment-poster-card {
+    background: #FDFBF7;
+    border-radius: 16px;
+    padding: 1.5rem;
+    color: #1a1a1a;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+    min-height: 380px;
+    border: 4px solid #EAE3D2;
+}
+
+.poster-header-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px stroke #e0d8c3;
+    padding-bottom: 0.75rem;
+}
+
+.poster-qr-box {
+    width: 54px;
+    height: 54px;
+    background: #111;
+    color: #fff;
+    border-radius: 8px;
+    padding: 6px;
+    flex-shrink: 0;
+}
+
+.qr-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.poster-title-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.poster-main-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #111827;
+    line-height: 1.15;
+}
+
+.poster-sub-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #111827;
+}
+
+.poster-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.poster-info-col {
+    max-width: 60%;
+}
+
+.region-box {
+    margin-bottom: 1rem;
+}
+
+.region-label {
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    color: #111;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.region-list {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #334155;
+    line-height: 1.35;
+}
+
+.poster-contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    background: #F1EBDC;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #E2D9C5;
+}
+
+.contact-line {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.contact-line i {
+    color: #FF8C00;
+}
+
+/* Stacked Capacity Badges */
+.capacity-badge-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    z-index: 3;
+}
+
+.cap-pill {
+    background: #FF8C00;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 900;
+    padding: 0.15rem 0.65rem;
+    border-radius: 999px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 8px rgba(255, 140, 0, 0.3);
+}
+
+.cap-num {
+    background: #FF8C00;
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 900;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+}
+
+.cap-unit {
+    background: #FF8C00;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 0.15rem 0.75rem;
+    border-radius: 999px;
+}
+
+/* Poster Forklift Image Frame */
+.poster-forklift-frame {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 240px;
+    height: 220px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.forklift-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(-5px 10px 15px rgba(0, 0, 0, 0.4));
+}
+
+/* Floating Glass Pills */
+.floating-glass-pill {
+    position: absolute;
+    z-index: 10;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.75rem 1.1rem;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transition: transform var(--transition-fast);
+}
+
+.floating-glass-pill:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 159, 28, 0.5);
+}
+
+.pill-top-right {
+    top: -20px;
+    right: -15px;
+}
+
+.pill-bottom-center {
+    bottom: -25px;
+    left: 40px;
+}
+
+.pill-icon-box {
+    width: 38px;
+    height: 38px;
+    background: #FF8C00;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+}
+
+.pill-icon-box.blue-gear {
+    background: #00B4D8;
+    box-shadow: 0 4px 12px rgba(0, 180, 216, 0.4);
+}
+
+.pill-text-content h5 {
+    font-family: var(--font-heading);
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.pill-text-content p {
+    font-size: 0.75rem;
+    color: var(--clr-gray-300);
+    margin-top: 1px;
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE SYSTEM (Mobile Friendly Enhancements)
+   ========================================================================== */
+
+/* Tablet & Mobile Screens (max-width: 991px) */
+@media (max-width: 991px) {
+    /* Top Bar & Contacts */
+    .top-bar-content {
+        flex-direction: column;
+        gap: 0.6rem;
+        text-align: center;
+        padding: 0.6rem 1rem;
+    }
+
+    .top-info {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem 0.8rem;
+        font-size: 0.78rem;
+    }
+
+    .top-divider {
+        display: none;
+    }
+
+    .top-badges {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    /* Header & Mobile Drawer */
+    .nav-container {
+        padding: 0.8rem 1.25rem;
+    }
+
+    .brand-logo-group {
+        gap: 0.75rem;
+    }
+
+    .logo-circular-emblem {
+        width: 46px;
+        height: 46px;
+    }
+
+    .brand-main {
+        font-size: 1.05rem;
+        letter-spacing: 0.5px;
+    }
+
+    .brand-sub {
+        font-size: 0.68rem;
+    }
+
+    .nav-right-cluster {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-top-row {
+        display: none; /* Hide header quotation button on mobile to prioritize brand & hamburger menu */
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--clr-navy-darker);
+        padding: 5rem 2rem 2rem 2rem;
+        box-shadow: -8px 0 30px rgba(0, 0, 0, 0.6);
+        transition: right var(--transition-normal);
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .nav-link {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--clr-white);
+        display: block;
+        padding: 0.4rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 3.5rem 0 4.5rem 0;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    .hero-tag {
+        margin: 0 auto 1.25rem auto;
+    }
+
+    .hero-title {
+        font-size: 2.1rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 0.98rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .media-panel-container {
+        max-width: 100%;
+        margin: 1rem auto 0 auto;
+    }
+
+    .parchment-poster-card {
+        padding: 1.25rem;
+    }
+
+    .poster-main-title,
+    .poster-sub-title {
+        font-size: 1.05rem;
+    }
+
+    .poster-forklift-frame {
+        width: 180px;
+        height: 160px;
+        bottom: -5px;
+        right: -5px;
+    }
+
+    .floating-glass-pill {
+        padding: 0.6rem 0.85rem;
+    }
+
+    .pill-top-right {
+        top: -15px;
+        right: -5px;
+    }
+
+    .pill-bottom-center {
+        bottom: -15px;
+        left: 10px;
+    }
+
+    .pill-text-content h5 {
+        font-size: 0.8rem;
+    }
+
+    .pill-text-content p {
+        font-size: 0.7rem;
+    }
+
+    /* Goals Section */
+    .goals-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .goals-visual-col {
+        order: 2;
+    }
+
+    .goals-content {
+        order: 1;
+        text-align: center;
+    }
+
+    .left-align {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .goals-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Equipment Catalog Filters */
+    .equipment-filters-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 0.4rem 0.5rem 0.8rem 0.5rem;
+        gap: 0.6rem;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filter-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+        padding: 0.55rem 1.1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Policy FAST Section */
+    .policy-block,
+    .policy-block.reverse {
+        flex-direction: column !important;
+        gap: 1.5rem;
+    }
+
+    .policy-img-col,
+    .policy-content-col {
+        width: 100%;
+    }
+
+    .policy-img {
+        max-height: 280px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Smartphone Screens (max-width: 576px) */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+
+    .poster-header-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .poster-body {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .poster-info-col {
+        max-width: 100%;
+    }
+
+    .capacity-badge-stack {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .poster-forklift-frame {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        bottom: 0;
+        right: 0;
+        margin-top: 0.5rem;
+    }
+
+    .floating-glass-pill {
+        position: relative;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        margin-top: 0.75rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .goals-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Modal Form Responsive */
+    .modal-dialog {
+        padding: 1.5rem 1.2rem;
+        margin: 0.8rem;
+        max-width: 95vw;
+        max-height: 92vh;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .specs-table th,
+    .specs-table td {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.82rem;
+    }
+
+    .whatsapp-floating-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 1.4rem;
+    }
+
+    .wa-tooltip {
+        display: none; /* Hide hover tooltip on touch devices */
+    }
+
+    .scroll-top-btn {
+        width: 44px;
+        height: 44px;
+        bottom: 15px;
+        left: 15px;
+    }
 }
