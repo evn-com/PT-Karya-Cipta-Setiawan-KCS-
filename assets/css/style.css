@@ -286,10 +286,10 @@ button {
 /* Row 1: Top Bar */
 .top-bar {
     background-color: var(--clr-navy-darker);
-    color: var(--clr-gray-300);
-    font-size: 0.825rem;
-    padding: 0.55rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--clr-white);
+    font-size: 0.85rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .top-bar-content {
@@ -304,21 +304,39 @@ button {
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
+    color: var(--clr-white);
 }
 
 .top-info span {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.45rem;
+    color: var(--clr-white);
+    font-weight: 500;
+}
+
+.top-info strong {
+    color: var(--clr-white);
+    font-weight: 700;
+}
+
+.top-info a {
+    color: var(--clr-white);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.top-info a:hover {
+    color: var(--clr-accent-orange);
 }
 
 .top-info i {
     color: var(--clr-accent-orange);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
 }
 
 .top-divider {
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.3);
     font-weight: 300;
 }
 
@@ -330,17 +348,18 @@ button {
 }
 
 .badge-pill {
-    background: rgba(255, 159, 28, 0.12);
+    background: rgba(11, 19, 43, 0.85);
     color: var(--clr-accent-orange);
-    border: 1px solid rgba(255, 159, 28, 0.25);
-    padding: 0.22rem 0.7rem;
+    border: 1px solid rgba(255, 159, 28, 0.4);
+    padding: 0.25rem 0.75rem;
     border-radius: var(--radius-full);
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
+    gap: 0.4rem;
     white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Row 2: Main Header Navbar */
@@ -371,12 +390,25 @@ button {
 }
 
 /* KCS Logo (Prominent & Clear) */
+.brand-logo-group,
 .brand-logo {
     display: flex;
     align-items: center;
     gap: 0.85rem;
     text-decoration: none;
     flex-shrink: 0;
+}
+
+.logo-circular-emblem {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+}
+
+.logo-circular-emblem svg {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .logo-img {
@@ -3330,25 +3362,70 @@ button {
 
     /* Header & Mobile Drawer */
     .nav-container {
-        padding: 0.8rem 1.25rem;
+        position: relative;
+        height: auto;
+        min-height: 100px;
+        padding: 0.85rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .brand-logo-group {
-        gap: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        gap: 0.45rem;
+        padding-left: 2.8rem;
+        padding-right: 2.8rem;
     }
 
     .logo-circular-emblem {
-        width: 46px;
-        height: 46px;
+        width: 56px;
+        height: 56px;
+        margin: 0 auto;
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .brand-title-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
     }
 
     .brand-main {
-        font-size: 1.05rem;
+        font-size: 1.08rem;
+        line-height: 1.25;
         letter-spacing: 0.5px;
+        text-align: center;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        color: var(--clr-white);
+        max-width: 280px;
+        margin: 0 auto;
     }
 
     .brand-sub {
         font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        color: var(--clr-accent-orange);
+        text-transform: uppercase;
+        text-align: center;
+        white-space: normal;
+        margin-top: 3px;
+        line-height: 1.2;
+        max-width: 300px;
     }
 
     .nav-right-cluster {
@@ -3362,6 +3439,11 @@ button {
 
     .hamburger-btn {
         display: flex;
+        position: absolute;
+        right: 1.1rem;
+        top: 1.25rem;
+        margin: 0;
+        z-index: 1002;
     }
 
     .nav-menu {
@@ -3539,16 +3621,88 @@ button {
         padding: 0 1rem;
     }
 
+    .nav-container {
+        min-height: 102px;
+        padding: 0.75rem 0.75rem;
+    }
+
+    .logo-circular-emblem {
+        width: 52px;
+        height: 52px;
+    }
+
+    .brand-main {
+        font-size: 1.02rem;
+        max-width: 240px;
+    }
+
+    .brand-sub {
+        font-size: 0.65rem;
+        letter-spacing: 0.6px;
+        max-width: 260px;
+    }
+
+    .hamburger-btn {
+        right: 0.85rem;
+        top: 1.1rem;
+    }
+
     .section-title {
         font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .hero-section {
+        padding: 2.25rem 0 3.25rem 0;
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.8rem;
+    }
+
+    .hero-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .hero-title {
         font-size: 1.75rem;
+        line-height: 1.25;
+        text-align: center;
+        width: 100%;
+        word-break: break-word;
+    }
+
+    .hero-subtitle {
+        font-size: 0.92rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+        margin-bottom: 1.75rem;
     }
 
     .hero-actions .btn {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0.95rem 1.25rem;
+        font-size: 0.98rem;
     }
 
     .cta-buttons {
