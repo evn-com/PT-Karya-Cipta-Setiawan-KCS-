@@ -1872,6 +1872,23 @@ button {
         display: none;
     }
 
+    .logo-circular-emblem {
+        width: 84px;
+        height: 84px;
+    }
+
+    .brand-main {
+        font-size: 1.28rem;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .brand-sub {
+        font-size: 0.78rem;
+        font-weight: 800;
+        text-align: center;
+    }
+
     .desktop-only-btn {
         display: none;
     }
@@ -1915,7 +1932,7 @@ button {
     }
 
     .hero-title {
-        font-size: 2.1rem;
+        font-size: 1.7rem;
         line-height: 1.25;
     }
 
@@ -3393,8 +3410,8 @@ button {
     }
 
     .logo-circular-emblem {
-        width: 56px;
-        height: 56px;
+        width: 88px;
+        height: 88px;
         margin: 0 auto;
         display: block;
         flex-shrink: 0;
@@ -3410,29 +3427,30 @@ button {
     }
 
     .brand-main {
-        font-size: 1.08rem;
-        line-height: 1.25;
-        letter-spacing: 0.5px;
+        font-size: 1.35rem;
+        font-weight: 900;
+        line-height: 1.2;
+        letter-spacing: 0.6px;
         text-align: center;
         white-space: normal;
         word-break: break-word;
         overflow-wrap: break-word;
         color: var(--clr-white);
-        max-width: 280px;
+        max-width: 360px;
         margin: 0 auto;
     }
 
     .brand-sub {
-        font-size: 0.68rem;
-        font-weight: 700;
-        letter-spacing: 0.8px;
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 1px;
         color: var(--clr-accent-orange);
         text-transform: uppercase;
         text-align: center;
         white-space: normal;
-        margin-top: 3px;
-        line-height: 1.2;
-        max-width: 300px;
+        margin-top: 4px;
+        line-height: 1.25;
+        max-width: 380px;
     }
 
     .nav-right-cluster {
@@ -3502,7 +3520,7 @@ button {
     }
 
     .hero-title {
-        font-size: 2.1rem;
+        font-size: 1.85rem;
         line-height: 1.2;
     }
 
@@ -3749,24 +3767,26 @@ button {
     }
 
     .logo-circular-emblem {
-        width: 52px;
-        height: 52px;
+        width: 80px;
+        height: 80px;
     }
 
     .brand-main {
-        font-size: 1.02rem;
-        max-width: 240px;
+        font-size: 1.18rem;
+        font-weight: 900;
+        max-width: 310px;
     }
 
     .brand-sub {
-        font-size: 0.65rem;
-        letter-spacing: 0.6px;
-        max-width: 260px;
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        max-width: 320px;
     }
 
     .hamburger-btn {
         right: 0.85rem;
-        top: 1.1rem;
+        top: 1.25rem;
     }
 
     .section-title {
@@ -3795,7 +3815,7 @@ button {
     }
 
     .hero-title {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         line-height: 1.25;
         text-align: center;
         width: 100%;
