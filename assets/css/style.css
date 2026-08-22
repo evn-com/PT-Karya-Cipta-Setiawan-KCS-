@@ -46,10 +46,10 @@
     --shadow-lg: 0 16px 36px rgba(11, 19, 43, 0.15);
     --shadow-glow: 0 0 25px rgba(255, 159, 28, 0.4);
 
-    /* Transitions */
-    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Transitions (Ultra Smooth Easing System) */
+    --transition-fast: 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+    --transition-normal: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* --------------------------------------------------------------------------
@@ -102,6 +102,25 @@ textarea {
     outline: none;
     border: none;
 }
+
+/* --------------------------------------------------------------------------
+   SMOOTH SCROLL REVEAL & MOTION SYSTEM
+   -------------------------------------------------------------------------- */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(32px) scale(0.98);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.reveal-delay-1 { transition-delay: 0.12s; }
+.reveal-delay-2 { transition-delay: 0.24s; }
+.reveal-delay-3 { transition-delay: 0.36s; }
 
 button {
     cursor: pointer;
@@ -606,9 +625,12 @@ button {
 .hero-section {
     position: relative;
     background-color: var(--clr-navy-darker);
+
+    /* Gambar background langsung dari internet agar langsung terlihat */
     background-image:
         linear-gradient(135deg, rgba(7, 13, 30, 0.75) 0%, rgba(11, 16, 33, 0.85) 100%),
-        url('../images/kcs-upload-02.jpg');
+        url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -2253,6 +2275,7 @@ button {
 }
 
 @media (max-width: 380px) {
+
     .goals-stats-grid,
     .goals-stats-box {
         grid-template-columns: 1fr;
@@ -2693,7 +2716,7 @@ button {
    ========================================================================== */
 .custom-fullpage-section {
     background-color: #060C1D;
-    background-image: 
+    background-image:
         radial-gradient(circle at 50% 0%, rgba(255, 107, 0, 0.15) 0%, transparent 65%),
         radial-gradient(circle at 10% 50%, rgba(13, 25, 56, 0.8) 0%, transparent 50%),
         radial-gradient(circle at 90% 80%, rgba(255, 136, 0, 0.08) 0%, transparent 50%);
@@ -2815,7 +2838,7 @@ button {
     padding: 6px;
     background: #FFFFFF;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .qr-svg {
@@ -2938,7 +2961,7 @@ button {
     max-width: 580px;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.6));
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.6));
     transition: transform 0.4s ease;
 }
 
@@ -2966,7 +2989,7 @@ button {
     border: 3px solid #FFE600;
     border-radius: 14px;
     padding: 1rem 1.75rem;
-    box-shadow: 0 10px 30px rgba(255, 85, 0, 0.4), 0 4px 10px rgba(0,0,0,0.5), inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(255, 85, 0, 0.4), 0 4px 10px rgba(0, 0, 0, 0.5), inset 0 2px 0 rgba(255, 255, 255, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2981,17 +3004,33 @@ button {
     height: 10px;
     background: #475569;
     border-radius: 50%;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.8), 0 1px 0 rgba(255,255,255,0.4);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.4);
 }
-.sign-screw.top-left { top: 8px; left: 10px; }
-.sign-screw.top-right { top: 8px; right: 10px; }
-.sign-screw.bottom-left { bottom: 8px; left: 10px; }
-.sign-screw.bottom-right { bottom: 8px; right: 10px; }
+
+.sign-screw.top-left {
+    top: 8px;
+    left: 10px;
+}
+
+.sign-screw.top-right {
+    top: 8px;
+    right: 10px;
+}
+
+.sign-screw.bottom-left {
+    bottom: 8px;
+    left: 10px;
+}
+
+.sign-screw.bottom-right {
+    bottom: 8px;
+    right: 10px;
+}
 
 .sign-badge-icon {
     font-size: 1.8rem;
     color: #FFFFFF;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .sign-text {
@@ -3081,7 +3120,7 @@ button {
     color: #FFFFFF;
     line-height: 1;
     margin-bottom: 0.6rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .stat-text-label {
@@ -3135,7 +3174,7 @@ button {
     color: var(--clr-white);
     line-height: 1.1;
     white-space: nowrap;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .brand-sub {
@@ -3147,7 +3186,7 @@ button {
     text-transform: uppercase;
     margin-top: 3px;
     white-space: nowrap;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 /* Nav Right Cluster (Top Quotation button + Menu Nav) */
@@ -3493,6 +3532,7 @@ button {
 
 /* Tablet & Mobile Screens (max-width: 991px) */
 @media (max-width: 991px) {
+
     /* Top Bar & Contacts */
     .top-bar-content {
         flex-direction: column;
@@ -3593,7 +3633,8 @@ button {
     }
 
     .nav-top-row {
-        display: none; /* Hide header quotation button on mobile to prioritize brand & hamburger menu */
+        display: none;
+        /* Hide header quotation button on mobile to prioritize brand & hamburger menu */
     }
 
     .hamburger-btn {
@@ -4083,7 +4124,8 @@ button {
     }
 
     .wa-tooltip {
-        display: none; /* Hide hover tooltip on touch devices */
+        display: none;
+        /* Hide hover tooltip on touch devices */
     }
 
     .scroll-top-btn {

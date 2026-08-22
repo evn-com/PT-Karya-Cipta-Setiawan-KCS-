@@ -754,4 +754,30 @@ _Dikirim via Website Profile PT KARYA CIPTA SETIAWAN_`;
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
+
+    // ----------------------------------------------------------------------
+    // 8. ULTRA-SMOOTH SCROLL REVEAL OBSERVER
+    // ----------------------------------------------------------------------
+    const revealTargets = document.querySelectorAll(
+        '.section-header, .value-card, .equipment-card, .policy-block, .project-card, .cta-box, .goals-wrapper, .custom-stat-card'
+    );
+
+    revealTargets.forEach((target, index) => {
+        target.classList.add('reveal-on-scroll');
+        if (index % 3 === 1) target.classList.add('reveal-delay-1');
+        if (index % 3 === 2) target.classList.add('reveal-delay-2');
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealTargets.forEach(target => revealObserver.observe(target));
 });
