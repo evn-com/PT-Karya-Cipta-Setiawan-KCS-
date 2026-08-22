@@ -608,7 +608,7 @@ button {
     background-color: var(--clr-navy-darker);
     background-image:
         linear-gradient(135deg, rgba(7, 13, 30, 0.86) 0%, rgba(11, 16, 33, 0.93) 100%),
-        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2000&auto=format&fit=crop');
+        url('../images/kcs-upload-02.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -852,7 +852,7 @@ button {
     background-image:
         linear-gradient(180deg, rgba(244, 246, 251, 0.94) 0%, rgba(237, 241, 247, 0.96) 100%),
         radial-gradient(rgba(11, 16, 33, 0.05) 1.5px, transparent 1.5px),
-        url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2000&auto=format&fit=crop');
+        url('../images/kcs-upload-01.jpg');
     background-size: 100% 100%, 24px 24px, cover;
     background-position: center;
     background-attachment: fixed;
@@ -985,7 +985,7 @@ button {
     background-color: var(--clr-navy-darker);
     background-image:
         linear-gradient(135deg, rgba(7, 13, 30, 0.91) 0%, rgba(11, 16, 33, 0.95) 100%),
-        url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2000&auto=format&fit=crop');
+        url('../images/kcs-upload-07.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -1149,7 +1149,7 @@ button {
     background-image:
         linear-gradient(180deg, rgba(238, 242, 248, 0.94) 0%, rgba(229, 235, 243, 0.96) 100%),
         radial-gradient(rgba(255, 159, 28, 0.07) 1.5px, transparent 1.5px),
-        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop');
+        url('../images/kcs-upload-08.jpg');
     background-size: 100% 100%, 32px 32px, cover;
     background-position: center;
     background-attachment: fixed;
@@ -1343,7 +1343,7 @@ button {
     background-image:
         linear-gradient(180deg, rgba(244, 246, 251, 0.94) 0%, rgba(237, 241, 247, 0.96) 100%),
         radial-gradient(rgba(11, 16, 33, 0.05) 1.5px, transparent 1.5px),
-        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop');
+        url('../images/kcs-upload-05.jpg');
     background-size: 100% 100%, 24px 24px, cover;
     background-position: center;
     background-attachment: fixed;
@@ -1526,7 +1526,7 @@ button {
     background-color: var(--clr-navy-darker);
     background-image:
         linear-gradient(180deg, rgba(11, 16, 33, 0.91) 0%, rgba(7, 13, 30, 0.96) 100%),
-        url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2000&auto=format&fit=crop');
+        url('../images/kcs-upload-10.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -2544,12 +2544,15 @@ button {
 
 /* Projects & Track Record Section */
 .projects-section {
-    padding: 6rem 0;
+    padding: 6.5rem 0;
     background-color: #f4f6fb;
     background-image:
+        linear-gradient(180deg, rgba(244, 246, 251, 0.94) 0%, rgba(237, 241, 247, 0.96) 100%),
         radial-gradient(rgba(11, 16, 33, 0.06) 1.5px, transparent 1.5px),
-        linear-gradient(180deg, #f8fafe 0%, #edf1f7 100%);
-    background-size: 24px 24px, 100% 100%;
+        url('../images/kcs-upload-06.jpg');
+    background-size: 100% 100%, 24px 24px, cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
 }
 
