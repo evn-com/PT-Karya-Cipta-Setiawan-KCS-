@@ -607,8 +607,12 @@ button {
     position: relative;
     background-color: var(--clr-navy-darker);
     background-image:
-        radial-gradient(circle at 15% 50%, rgba(255, 159, 28, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 85% 30%, rgba(0, 180, 216, 0.08) 0%, transparent 40%);
+        linear-gradient(135deg, rgba(7, 13, 30, 0.86) 0%, rgba(11, 16, 33, 0.93) 100%),
+        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2000&auto=format&fit=crop');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     padding: 6rem 0 7rem 0;
     overflow: hidden;
 }
@@ -616,8 +620,11 @@ button {
 .hero-bg-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(7, 13, 30, 0.3) 0%, rgba(7, 13, 30, 0.95) 100%);
+    background:
+        radial-gradient(circle at 50% 30%, rgba(255, 159, 28, 0.08) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(7, 13, 30, 0.3) 0%, rgba(7, 13, 30, 0.96) 100%);
     z-index: 1;
+    pointer-events: none;
 }
 
 .hero-container {
@@ -827,7 +834,24 @@ button {
    -------------------------------------------------------------------------- */
 .value-prop-section {
     padding: 6rem 0;
-    background-color: var(--clr-gray-50);
+    background-color: #f4f6fb;
+    background-image:
+        radial-gradient(rgba(11, 16, 33, 0.06) 1.5px, transparent 1.5px),
+        linear-gradient(180deg, #f8fafe 0%, #edf1f7 100%);
+    background-size: 24px 24px, 100% 100%;
+    position: relative;
+}
+
+.value-prop-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: linear-gradient(180deg, rgba(7, 13, 30, 0.7) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 2;
 }
 
 .value-cards-grid {
@@ -836,10 +860,10 @@ button {
 
 .value-card {
     background-color: var(--clr-white);
-    border: 1px solid var(--clr-gray-200);
+    border: 1px solid rgba(220, 228, 240, 0.9);
     border-radius: var(--radius-lg);
     padding: 2.5rem 2rem;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 10px 30px rgba(11, 16, 33, 0.06), 0 2px 6px rgba(11, 16, 33, 0.04);
     transition: all var(--transition-normal);
     position: relative;
     display: flex;
@@ -848,8 +872,8 @@ button {
 
 .value-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(255, 159, 28, 0.4);
+    box-shadow: 0 20px 40px rgba(11, 16, 33, 0.12), 0 0 20px rgba(255, 159, 28, 0.15);
+    border-color: rgba(255, 159, 28, 0.45);
 }
 
 .value-card.featured {
@@ -1099,7 +1123,25 @@ button {
    -------------------------------------------------------------------------- */
 .equipment-section {
     padding: 6rem 0;
-    background-color: var(--clr-gray-100);
+    background-color: #f0f4f9;
+    background-image:
+        radial-gradient(rgba(255, 159, 28, 0.07) 1.5px, transparent 1.5px),
+        radial-gradient(rgba(11, 16, 33, 0.05) 1.5px, transparent 1.5px),
+        linear-gradient(180deg, #eef2f8 0%, #e5ebf3 100%);
+    background-size: 36px 36px, 24px 24px, 100% 100%;
+    position: relative;
+}
+
+.equipment-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: linear-gradient(180deg, rgba(7, 13, 30, 0.25) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 2;
 }
 
 .equipment-filters-wrapper {
@@ -1146,8 +1188,8 @@ button {
     background-color: var(--clr-white);
     border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--clr-gray-200);
+    box-shadow: 0 10px 28px rgba(11, 16, 33, 0.07), 0 2px 6px rgba(11, 16, 33, 0.04);
+    border: 1px solid rgba(220, 228, 240, 0.9);
     transition: all var(--transition-normal);
     display: flex;
     flex-direction: column;
@@ -1163,7 +1205,8 @@ button {
 
 .equipment-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 40px rgba(11, 16, 33, 0.14), 0 0 22px rgba(255, 159, 28, 0.18);
+    border-color: rgba(255, 159, 28, 0.45);
 }
 
 .equipment-img-wrapper {
@@ -1929,6 +1972,7 @@ button {
 
     .hero-section {
         padding: 3.5rem 0;
+        background-attachment: scroll;
     }
 
     .hero-title {
@@ -2448,7 +2492,12 @@ button {
 /* Projects & Track Record Section */
 .projects-section {
     padding: 6rem 0;
-    background-color: var(--clr-gray-100);
+    background-color: #f4f6fb;
+    background-image:
+        radial-gradient(rgba(11, 16, 33, 0.06) 1.5px, transparent 1.5px),
+        linear-gradient(180deg, #f8fafe 0%, #edf1f7 100%);
+    background-size: 24px 24px, 100% 100%;
+    position: relative;
 }
 
 .projects-grid {
@@ -2459,8 +2508,8 @@ button {
     background-color: var(--clr-white);
     border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--clr-gray-200);
+    box-shadow: 0 10px 28px rgba(11, 16, 33, 0.07), 0 2px 6px rgba(11, 16, 33, 0.04);
+    border: 1px solid rgba(220, 228, 240, 0.9);
     transition: all var(--transition-normal);
     display: flex;
     flex-direction: column;
@@ -2468,7 +2517,8 @@ button {
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 40px rgba(11, 16, 33, 0.14), 0 0 22px rgba(255, 159, 28, 0.18);
+    border-color: rgba(255, 159, 28, 0.45);
 }
 
 .project-img-wrapper {
