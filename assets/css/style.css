@@ -1057,6 +1057,46 @@ button {
     object-fit: cover;
     object-position: center;
     display: block;
+    transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.goals-image-box:hover .goals-img {
+    transform: scale(1.05);
+}
+
+.video-play-badge {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    background: rgba(11, 16, 33, 0.85);
+    border: 1px solid rgba(255, 159, 28, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.5rem 1.1rem;
+    border-radius: var(--radius-full);
+    color: var(--clr-white);
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 159, 28, 0.25);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 3;
+}
+
+.video-play-badge i {
+    font-size: 1.1rem;
+    color: var(--clr-accent-orange);
+    animation: pulse 2s infinite;
+}
+
+.goals-image-box:hover .video-play-badge {
+    transform: scale(1.05);
+    border-color: rgba(255, 159, 28, 0.8);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 159, 28, 0.4);
 }
 
 .goals-paragraph {
