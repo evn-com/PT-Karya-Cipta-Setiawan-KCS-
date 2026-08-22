@@ -617,6 +617,20 @@ button {
     overflow: hidden;
 }
 
+.hero-visual {
+    perspective: 1000px;
+}
+
+.media-panel-container {
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+    animation: floatGentle 6s ease-in-out infinite alternate;
+}
+
+.media-panel-container:hover {
+    transform: translateY(-10px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 159, 28, 0.25);
+}
+
 .hero-bg-overlay {
     position: absolute;
     inset: 0;
@@ -833,12 +847,15 @@ button {
    6. VALUE PROPOSITION SECTION
    -------------------------------------------------------------------------- */
 .value-prop-section {
-    padding: 6rem 0;
+    padding: 6.5rem 0;
     background-color: #f4f6fb;
     background-image:
-        radial-gradient(rgba(11, 16, 33, 0.06) 1.5px, transparent 1.5px),
-        linear-gradient(180deg, #f8fafe 0%, #edf1f7 100%);
-    background-size: 24px 24px, 100% 100%;
+        linear-gradient(180deg, rgba(244, 246, 251, 0.94) 0%, rgba(237, 241, 247, 0.96) 100%),
+        radial-gradient(rgba(11, 16, 33, 0.05) 1.5px, transparent 1.5px),
+        url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2000&auto=format&fit=crop');
+    background-size: 100% 100%, 24px 24px, cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
 }
 
@@ -863,17 +880,17 @@ button {
     border: 1px solid rgba(220, 228, 240, 0.9);
     border-radius: var(--radius-lg);
     padding: 2.5rem 2rem;
-    box-shadow: 0 10px 30px rgba(11, 16, 33, 0.06), 0 2px 6px rgba(11, 16, 33, 0.04);
-    transition: all var(--transition-normal);
+    box-shadow: 0 12px 32px rgba(11, 16, 33, 0.06), 0 2px 6px rgba(11, 16, 33, 0.04);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
 .value-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(11, 16, 33, 0.12), 0 0 20px rgba(255, 159, 28, 0.15);
-    border-color: rgba(255, 159, 28, 0.45);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(11, 16, 33, 0.14), 0 0 25px rgba(255, 159, 28, 0.2);
+    border-color: rgba(255, 159, 28, 0.5);
 }
 
 .value-card.featured {
@@ -965,23 +982,28 @@ button {
    7. COMPANY GOALS SECTION
    -------------------------------------------------------------------------- */
 .goals-section {
-    background: linear-gradient(135deg, var(--clr-navy-dark) 0%, var(--clr-navy-darker) 100%);
-    padding: 6rem 0;
+    background-color: var(--clr-navy-darker);
+    background-image:
+        linear-gradient(135deg, rgba(7, 13, 30, 0.91) 0%, rgba(11, 16, 33, 0.95) 100%),
+        url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2000&auto=format&fit=crop');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 6.5rem 0;
     color: var(--clr-white);
     position: relative;
     overflow: hidden;
 }
 
-.goals-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3.5rem;
-    align-items: center;
-}
-
 .goals-visual-col {
     position: relative;
     width: 100%;
+    perspective: 1000px;
+    transition: transform 0.4s ease;
+}
+
+.goals-visual-col:hover {
+    transform: translateY(-6px) scale(1.01);
 }
 
 .goals-image-box {
@@ -1122,13 +1144,15 @@ button {
    8. EQUIPMENT SHOWCASE (CORE FEATURE)
    -------------------------------------------------------------------------- */
 .equipment-section {
-    padding: 6rem 0;
+    padding: 6.5rem 0;
     background-color: #f0f4f9;
     background-image:
+        linear-gradient(180deg, rgba(238, 242, 248, 0.94) 0%, rgba(229, 235, 243, 0.96) 100%),
         radial-gradient(rgba(255, 159, 28, 0.07) 1.5px, transparent 1.5px),
-        radial-gradient(rgba(11, 16, 33, 0.05) 1.5px, transparent 1.5px),
-        linear-gradient(180deg, #eef2f8 0%, #e5ebf3 100%);
-    background-size: 36px 36px, 24px 24px, 100% 100%;
+        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop');
+    background-size: 100% 100%, 32px 32px, cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
 }
 
@@ -1188,9 +1212,9 @@ button {
     background-color: var(--clr-white);
     border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: 0 10px 28px rgba(11, 16, 33, 0.07), 0 2px 6px rgba(11, 16, 33, 0.04);
+    box-shadow: 0 12px 30px rgba(11, 16, 33, 0.07), 0 2px 6px rgba(11, 16, 33, 0.04);
     border: 1px solid rgba(220, 228, 240, 0.9);
-    transition: all var(--transition-normal);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: flex;
     flex-direction: column;
     opacity: 1;
@@ -1204,9 +1228,9 @@ button {
 }
 
 .equipment-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(11, 16, 33, 0.14), 0 0 22px rgba(255, 159, 28, 0.18);
-    border-color: rgba(255, 159, 28, 0.45);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(11, 16, 33, 0.16), 0 0 25px rgba(255, 159, 28, 0.22);
+    border-color: rgba(255, 159, 28, 0.5);
 }
 
 .equipment-img-wrapper {
@@ -1314,8 +1338,16 @@ button {
    9. FAST VALUES SECTION
    -------------------------------------------------------------------------- */
 .fast-values-section {
-    padding: 6rem 0;
-    background-color: var(--clr-gray-100);
+    padding: 6.5rem 0;
+    background-color: #f4f6fb;
+    background-image:
+        linear-gradient(180deg, rgba(244, 246, 251, 0.94) 0%, rgba(237, 241, 247, 0.96) 100%),
+        radial-gradient(rgba(11, 16, 33, 0.05) 1.5px, transparent 1.5px),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop');
+    background-size: 100% 100%, 24px 24px, cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
 }
 
 .policy-alternating-wrapper {
@@ -1333,15 +1365,15 @@ button {
     background: var(--clr-white);
     padding: 2.5rem;
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--clr-gray-200);
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    box-shadow: 0 15px 35px rgba(11, 16, 33, 0.08);
+    border: 1px solid rgba(220, 228, 240, 0.9);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .policy-block:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(255, 159, 28, 0.4);
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 25px 50px rgba(11, 16, 33, 0.15), 0 0 25px rgba(255, 159, 28, 0.18);
+    border-color: rgba(255, 159, 28, 0.5);
 }
 
 .policy-block.reverse .policy-img-col {
@@ -1490,18 +1522,33 @@ button {
 
 /* Final CTA Section */
 .final-cta-section {
-    padding: 6rem 0;
-    background: linear-gradient(180deg, var(--clr-gray-50) 0%, var(--clr-navy-darker) 100%);
+    padding: 6.5rem 0;
+    background-color: var(--clr-navy-darker);
+    background-image:
+        linear-gradient(180deg, rgba(11, 16, 33, 0.91) 0%, rgba(7, 13, 30, 0.96) 100%),
+        url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2000&auto=format&fit=crop');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
 .cta-box {
-    background: var(--clr-navy-dark);
-    border: 1px solid rgba(255, 159, 28, 0.3);
+    background: rgba(11, 16, 33, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 159, 28, 0.4);
     border-radius: var(--radius-lg);
     padding: 4rem 2rem;
-    box-shadow: 0 20px 50px rgba(7, 13, 30, 0.5);
+    box-shadow: 0 25px 60px rgba(7, 13, 30, 0.6), 0 0 35px rgba(255, 159, 28, 0.2);
     max-width: 900px;
     margin: 0 auto;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cta-box:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 30px 70px rgba(7, 13, 30, 0.7), 0 0 45px rgba(255, 159, 28, 0.3);
 }
 
 .cta-title {
@@ -1970,7 +2017,13 @@ button {
         margin-top: 1.5rem;
     }
 
-    .hero-section {
+    .hero-section,
+    .value-prop-section,
+    .goals-section,
+    .equipment-section,
+    .fast-values-section,
+    .projects-section,
+    .final-cta-section {
         padding: 3.5rem 0;
         background-attachment: scroll;
     }
