@@ -607,7 +607,7 @@ button {
     position: relative;
     background-color: var(--clr-navy-darker);
     background-image:
-        linear-gradient(135deg, rgba(7, 13, 30, 0.86) 0%, rgba(11, 16, 33, 0.93) 100%),
+        linear-gradient(135deg, rgba(7, 13, 30, 0.75) 0%, rgba(11, 16, 33, 0.85) 100%),
         url('../images/kcs-upload-02.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -848,15 +848,22 @@ button {
    -------------------------------------------------------------------------- */
 .value-prop-section {
     padding: 6.5rem 0;
-    background-color: #f4f6fb;
+    background-color: #070d1e;
     background-image:
-        linear-gradient(180deg, rgba(244, 246, 251, 0.94) 0%, rgba(237, 241, 247, 0.96) 100%),
-        radial-gradient(rgba(11, 16, 33, 0.05) 1.5px, transparent 1.5px),
+        linear-gradient(180deg, rgba(7, 13, 30, 0.76) 0%, rgba(11, 16, 33, 0.85) 100%),
         url('../images/kcs-upload-01.jpg');
-    background-size: 100% 100%, 24px 24px, cover;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
+}
+
+.value-prop-section .section-title {
+    color: var(--clr-white);
+}
+
+.value-prop-section .section-desc {
+    color: var(--clr-gray-300);
 }
 
 .value-prop-section::before {
@@ -984,7 +991,7 @@ button {
 .goals-section {
     background-color: var(--clr-navy-darker);
     background-image:
-        linear-gradient(135deg, rgba(7, 13, 30, 0.91) 0%, rgba(11, 16, 33, 0.95) 100%),
+        linear-gradient(135deg, rgba(7, 13, 30, 0.78) 0%, rgba(11, 16, 33, 0.85) 100%),
         url('../images/kcs-upload-07.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -1145,15 +1152,22 @@ button {
    -------------------------------------------------------------------------- */
 .equipment-section {
     padding: 6.5rem 0;
-    background-color: #f0f4f9;
+    background-color: #070d1e;
     background-image:
-        linear-gradient(180deg, rgba(238, 242, 248, 0.94) 0%, rgba(229, 235, 243, 0.96) 100%),
-        radial-gradient(rgba(255, 159, 28, 0.07) 1.5px, transparent 1.5px),
+        linear-gradient(180deg, rgba(7, 13, 30, 0.78) 0%, rgba(11, 16, 33, 0.86) 100%),
         url('../images/kcs-upload-08.jpg');
-    background-size: 100% 100%, 32px 32px, cover;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
+}
+
+.equipment-section .section-title {
+    color: var(--clr-white);
+}
+
+.equipment-section .section-desc {
+    color: var(--clr-gray-300);
 }
 
 .equipment-section::before {
@@ -1339,15 +1353,22 @@ button {
    -------------------------------------------------------------------------- */
 .fast-values-section {
     padding: 6.5rem 0;
-    background-color: #f4f6fb;
+    background-color: #070d1e;
     background-image:
-        linear-gradient(180deg, rgba(244, 246, 251, 0.94) 0%, rgba(237, 241, 247, 0.96) 100%),
-        radial-gradient(rgba(11, 16, 33, 0.05) 1.5px, transparent 1.5px),
+        linear-gradient(180deg, rgba(7, 13, 30, 0.75) 0%, rgba(11, 16, 33, 0.85) 100%),
         url('../images/kcs-upload-05.jpg');
-    background-size: 100% 100%, 24px 24px, cover;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
+}
+
+.fast-values-section .section-title {
+    color: var(--clr-white);
+}
+
+.fast-values-section .section-desc {
+    color: var(--clr-gray-300);
 }
 
 .policy-alternating-wrapper {
@@ -1525,7 +1546,7 @@ button {
     padding: 6.5rem 0;
     background-color: var(--clr-navy-darker);
     background-image:
-        linear-gradient(180deg, rgba(11, 16, 33, 0.91) 0%, rgba(7, 13, 30, 0.96) 100%),
+        linear-gradient(180deg, rgba(11, 16, 33, 0.8) 0%, rgba(7, 13, 30, 0.9) 100%),
         url('../images/kcs-upload-10.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -2545,15 +2566,22 @@ button {
 /* Projects & Track Record Section */
 .projects-section {
     padding: 6.5rem 0;
-    background-color: #f4f6fb;
+    background-color: #070d1e;
     background-image:
-        linear-gradient(180deg, rgba(244, 246, 251, 0.94) 0%, rgba(237, 241, 247, 0.96) 100%),
-        radial-gradient(rgba(11, 16, 33, 0.06) 1.5px, transparent 1.5px),
+        linear-gradient(180deg, rgba(7, 13, 30, 0.76) 0%, rgba(11, 16, 33, 0.85) 100%),
         url('../images/kcs-upload-06.jpg');
-    background-size: 100% 100%, 24px 24px, cover;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
+}
+
+.projects-section .section-title {
+    color: var(--clr-white);
+}
+
+.projects-section .section-desc {
+    color: var(--clr-gray-300);
 }
 
 .projects-grid {
